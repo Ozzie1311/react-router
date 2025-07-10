@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+}
+
+main {
+  width: 600px;
+  font-family: Inter, sans-serif;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #fff7ed;
+  height: 111.62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 32px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header .logo {
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  font-size: 25.35px;
+  line-height: 40.27px;
+  color: #000000;
+}
+
+header div {
+  display: flex;
+  gap: 24px;
+}
+
+header div .link {
+  color: #4d4d4d;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22.92px;
+}
+
+section.home {
+  background-image: url(vanimage.png);
+  background-repeat: no-repeat;
+  aspect-ratio: 1/1;
+  width: 100%;
+  /* max-width: 548.15px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section div.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 494.33px;
+  height: 256.13px;
+  gap: 16px;
+}
+
+section div h1.home-title {
+  font-family: Inter, sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+section div p.home-p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+section div button.home-button {
+  background-color: #ff8c38;
+  height: 49.85px;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15.95px;
+  line-height: 31.66px;
+  text-align: center;
+  color: #ffffff;
+}
+
+section.about {
+  width: 100%;
+  background-color: #fff7ed;
+}
+
+section.about div.about-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-height: 233.21px;
+  margin-bottom: 16px;
+}
+
+div.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.about-info {
+  padding: 24px 16px;
+}
+
+div.about-info h1.about-info-title {
+  color: #161616;
+  font-size: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 16px;
+}
+
+div.about-info p.about-info-p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  text-wrap: pretty;
+}
+
+div.about-cta-container {
+  margin-top: 32px;
+  background-color: #ffcc8d;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+h2.cta-container-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+button.cta-container-button {
+  margin-top: 16px;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 15.95px;
+  line-height: 23.92px;
+  text-align: center;
+  background-color: #161616;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 49px;
+  width: 174px;
+  border: none;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #252525;
+  height: 74.75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22.92px;
+  text-align: center;
+  color: #aaa;
+}
