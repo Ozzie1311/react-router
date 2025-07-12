@@ -1,4 +1,4 @@
-import { vansData } from '../../vansData'
+import { vansData } from '../../../vansData'
 import { Link } from 'react-router-dom'
 
 const miSet = new Set()

@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { vansData } from '../../vansData'
+import { vansData } from '../../../vansData'
 import { FaArrowLeftLong } from 'react-icons/fa6'
 
 export const VansDetailed = () => {
