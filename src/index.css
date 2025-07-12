@@ -386,6 +386,26 @@ button.info-container-button {
   padding: 6px 0;
 }
 
+/* Section Host */
+section.host {
+  width: 100%;
+  background-color: #fff7ed;
+}
+
+nav.host-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+}
+
+nav.host-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #4d4d4d;
+  line-height: 22.9px;
+}
+
 footer {
   background-color: #252525;
   height: 74.75px;
