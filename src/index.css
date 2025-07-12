@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   /* overflow: hidden; */
   display: flex;
 }
@@ -51,7 +51,7 @@ header div .link {
 }
 
 section.home {
-  background-image: url(vanimage.png);
+  background-image: url(Images/vanimage.png);
   background-repeat: no-repeat;
   aspect-ratio: 1/1;
   width: 100%;
@@ -97,6 +97,7 @@ section div button.home-button {
   line-height: 31.66px;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }
 
 section.about {
@@ -164,6 +165,225 @@ button.cta-container-button {
   width: 174px;
   border: none;
   color: #ffffff;
+}
+
+/* Section vans */
+section.vans {
+  width: 100%;
+  background-color: #fff7ed;
+  padding: 10px 32px;
+}
+
+section.vans h1.vans-title {
+  color: 161616;
+  font-weight: 700;
+  line-height: 33.7px;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+section.vans div.vans-type-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.vans-type-container div.vans-type {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+div.vans-type span.span-type {
+  background-color: #ffead0;
+  color: #4d4d4d;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 23.9px;
+  padding: 4px 24px;
+}
+
+span.vans-clear-filters {
+  color: #4d4d4d;
+  line-height: 23.9px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+div.vans-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+div.vans-container div.vans {
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+div.vans-image {
+  width: 100%;
+}
+
+div.vans div.vans-image img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+div.vans div.vans-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+div.vans-info-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 31.7px;
+  color: #161616;
+}
+
+div.vans-info-container p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 31.7px;
+  color: #161616;
+}
+
+div.vans-container button {
+  border-radius: 5px;
+  text-align: center;
+  width: 85.71px;
+  height: 33.89px;
+  border: none;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 31.7px;
+  font-weight: 500;
+  margin: 16px 0px 8px 6px;
+  cursor: pointer;
+}
+
+div.vans-container button.vans-button-simple,
+div.detail-container i.detail-simple {
+  color: #ffead0;
+  background-color: #e17654;
+}
+div.vans-container button.vans-button-rugged,
+div.detail-container i.detail-rugged {
+  color: #ffead0;
+  background-color: #115e59;
+}
+
+div.vans-container button.vans-button-luxury,
+div.detail-container i.detail-luxury {
+  color: #ffead0;
+  background-color: #161616;
+}
+
+a.vans-link {
+  text-decoration: none;
+}
+
+/* VanDetailed */
+section.vans-detail {
+  width: 100%;
+  background-color: #fff7ed;
+  padding: 10px 32px;
+}
+
+section.vans-detail a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+section.vans-detail a svg {
+  color: #201f1d;
+  font-size: 15.95px;
+}
+
+section.vans-detail a p {
+  font-size: 15.95px;
+  font-weight: 500;
+  color: #201f1d;
+}
+
+div.detail-container {
+  width: 100%;
+}
+
+div.detail-img-container {
+  width: 100%;
+  margin: 16px 0px 24px 0;
+}
+
+div.detail-img-container img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+div.detail-container i {
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+div.info-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1.info-container-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 33.7px;
+  color: #161616;
+}
+
+p.info-container-price {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+p.info-container-price span.span-price {
+  color: #161616;
+  font-weight: 700;
+}
+
+p.info-container-description {
+  color: #161616;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23.9px;
+}
+
+button.info-container-button {
+  border-radius: 5px;
+  border: none;
+  background-color: #ff8c38;
+  font-family: Inter, sans-serif;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 31.7px;
+  cursor: pointer;
+  padding: 6px 0;
 }
 
 footer {
