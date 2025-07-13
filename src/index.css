@@ -25,10 +25,6 @@ header {
   padding: 0px 32px;
 }
 
-header a {
-  text-decoration: none;
-}
-
 header .logo {
   font-family: Inter, sans-serif;
   font-weight: 900;
@@ -399,11 +395,97 @@ nav.host-nav {
   padding: 0 32px;
 }
 
+/* Styles for Links */
+header a {
+  text-decoration: none;
+  color: #161616;
+}
+
+nav.host-nav a.active-link,
+a.active-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
+}
+
 nav.host-nav a {
   text-decoration: none;
   font-size: 18px;
   color: #4d4d4d;
   line-height: 22.9px;
+}
+
+/* HostVan Section */
+section.hostVan {
+  width: 100%;
+  padding: 0 32px;
+}
+
+h1.hostVan-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #161616;
+  margin: 16px 0px 24px 0;
+}
+
+div.hostVan-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0px 0px 24px 0;
+}
+
+div.hostVan-container a {
+  text-decoration: none;
+}
+
+div.van-item {
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  display: flex;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+div.van-item-img-container img {
+  aspect-ratio: 1/1;
+  max-width: 110px;
+  max-height: 110px;
+  border-radius: 5px;
+}
+
+div.van-item-text-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin-left: 16px;
+  gap: 6px;
+}
+
+div.van-item-text-container h2 {
+  color: #161616;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 31.66px;
+}
+
+div.van-item-text-container p {
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 31.66px;
+}
+/* HostVanDetail Section */
+section.host-van-detail a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* text-decoration: none; */
+  color: #201f1d;
+  padding: 0 32px;
+  font-size: 15.95px;
 }
 
 footer {

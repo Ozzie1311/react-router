@@ -1,17 +1,14 @@
 import { useParams, Link } from 'react-router-dom'
 import { vansData } from '../../../vansData'
 import { FaArrowLeftLong } from 'react-icons/fa6'
+import { BackToVans } from '../../components/BackToVans'
 
 export const VansDetailed = () => {
   const params = useParams()
   const findVan = vansData.find((vans) => vans.id === params.id)
   return (
     <section className='vans-detail'>
-      <Link to='/vans'>
-        <FaArrowLeftLong />
-        <p>Back to all vans</p>
-      </Link>
-
+      <BackToVans />
       <div className='detail-container'>
         <div className='detail-img-container'>
           <img src={findVan.imageUrl} alt={findVan.name} />
