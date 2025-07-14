@@ -8,6 +8,20 @@ export const HostVanDetail = () => {
   return (
     <section className='host-van-detail'>
       <BackToVans />
+      <div className='van-detail-container'>
+        <div className='van-detail-img-container'>
+          <img src={findVan.imageUrl} alt={findVan.name} />
+        </div>
+        <div className='van-detail-text-container'>
+          <i className={`detail-${findVan.type}`}>
+            {findVan.type.charAt(0).toUpperCase() + findVan.type.slice(1)}
+          </i>
+          <h1>{findVan.name}</h1>
+          <p>
+            <span>${`${findVan.price}`}</span>/day
+          </p>
+        </div>
+      </div>
     </section>
   )
 }
