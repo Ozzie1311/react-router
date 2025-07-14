@@ -5,9 +5,15 @@
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   /* overflow: hidden; */
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 main.main-container {
@@ -48,11 +54,12 @@ header div .link {
 }
 
 section.home {
+  height: 680px;
+  overflow-y: hidden;
   background-image: url(Images/vanimage.png);
   background-repeat: no-repeat;
   aspect-ratio: 1/1;
   width: 100%;
-  /* max-width: 548.15px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,33 +278,21 @@ div.vans-container button {
 
 div.vans-container button.vans-button-simple,
 div.detail-container i.detail-simple,
-<<<<<<< HEAD
 div.van-detail-text-container i.detail-simple {
-=======
-div.detail-info-container i.i-simple {
->>>>>>> b7b2b183e80e6783ab4ed0f010c63be84e54da29
   color: #ffead0;
   background-color: #e17654;
 }
 
 div.vans-container button.vans-button-rugged,
 div.detail-container i.detail-rugged,
-<<<<<<< HEAD
 div.van-detail-text-container i.detail-rugged {
-=======
-div.detail-info-container i.i-rugged {
->>>>>>> b7b2b183e80e6783ab4ed0f010c63be84e54da29
   color: #ffead0;
   background-color: #115e59;
 }
 
 div.vans-container button.vans-button-luxury,
 div.detail-container i.detail-luxury,
-<<<<<<< HEAD
 div.van-detail-text-container i.detail-luxury {
-=======
-div.detail-info-container i.i-luxury {
->>>>>>> b7b2b183e80e6783ab4ed0f010c63be84e54da29
   color: #ffead0;
   background-color: #161616;
 }
@@ -401,6 +396,7 @@ button.info-container-button {
 
 /* Section Host */
 section.host {
+  min-height: 680px;
   width: 100%;
   background-color: #fff7ed;
   padding: 0 32px;
@@ -499,6 +495,8 @@ section.host-van-detail {
   background-color: #fff;
   margin-top: 32px;
   padding: 32px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 a.back-link {
@@ -570,10 +568,6 @@ div.hostVanInfo {
   margin-top: 16px;
 }
 
-div.hostVanInfo p {
-  text-wrap: balance;
-}
-
 div.van-detail-container {
   display: flex;
   padding: 0 32px;
@@ -606,13 +600,27 @@ div.van-detail-text-container i {
   font-size: 16px;
 }
 
+/* Host Van detail Pricing */
+div.pricing-container {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  gap: 2px;
+}
+
+/* Host Van detail Photo */
+img.img-photo {
+  margin-top: 32px;
+  border-radius: 6px;
+}
+
 footer {
   background-color: #252525;
   height: 74.75px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: sticky;
+  bottom: 0;
+  text-align: center;
 }
 
 footer p {
