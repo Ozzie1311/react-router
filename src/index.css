@@ -186,19 +186,13 @@ section.vans h1.vans-title {
   margin-bottom: 24px;
 }
 
-section.vans div.vans-type-container {
+section.vans div.vans-type-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div.vans-type-container div.vans-type {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-div.vans-type span.span-type {
+button.van-type {
   background-color: #ffead0;
   color: #4d4d4d;
   border-radius: 5px;
@@ -207,14 +201,44 @@ div.vans-type span.span-type {
   font-weight: 500;
   line-height: 23.9px;
   padding: 4px 24px;
+  font-family: Inter, sans-serif;
+  border: none;
+  cursor: pointer;
 }
 
-span.vans-clear-filters {
-  color: #4d4d4d;
-  line-height: 23.9px;
-  font-size: 16px;
-  font-weight: 500;
+button.simple:hover,
+button.simple:focus {
+  background-color: #e17654;
+  color: #ffead0;
+}
+
+button.rugged:hover,
+button.rugged:focus {
+  background-color: #115e59;
+  color: #ffead0;
+}
+
+button.luxury:hover,
+button.luxury:focus {
+  background-color: #161616;
+  color: #ffead0;
+}
+
+button.clear-filter {
+  background-color: transparent;
+  padding: 4px 4px;
   text-decoration: underline;
+}
+
+section.vans div.vans-type-wrapper div.vans-type-container {
+  display: flex;
+  gap: 32px;
+}
+
+div.vans-type-container div.vans-type {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 div.vans-container {

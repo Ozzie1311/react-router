@@ -5,7 +5,7 @@ export const BackToVans = () => {
   return (
     <Link className='back-link' to='..' relative='path'>
       <FaArrowLeftLong />
-      <p>Back to all vans</p>
+      <p>Back to vans</p>
     </Link>
   )
 }

@@ -1,32 +1,52 @@
 import { vansData } from '../../../vansData'
-import { Link } from 'react-router-dom'
-
-const miSet = new Set()
-
-vansData.forEach((vans) => {
-  miSet.add(vans.type)
-})
-
-const arrayTypes = Array.from(miSet)
+import { Link, useSearchParams } from 'react-router-dom'
 
 export const Vans = () => {
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  const typeFilter = searchParams.get('type')
+
+  const filterData = typeFilter
+    ? vansData.filter((vans) => vans.type === typeFilter)
+    : vansData
+
   return (
     <section className='vans'>
       <h1 className='vans-title'>Explore our van options</h1>
-      <div className='vans-type-container'>
-        <div className='vans-type'>
-          {arrayTypes.map((type) => {
-            return (
-              <span className='span-type' key={type}>
-                {type.charAt(0).toUpperCase() + type.slice(1)}
-              </span>
-            )
-          })}
+
+      <div className='vans-type-wrapper'>
+        <div className='vans-type-container'>
+          <button
+            className='van-type simple'
+            onClick={() => setSearchParams({ type: 'simple' })}
+          >
+            Simple
+          </button>
+          <button
+            className='van-type rugged'
+            onClick={() => setSearchParams({ type: 'rugged' })}
+          >
+            Rugged
+          </button>
+          <button
+            className='van-type luxury'
+            onClick={() => setSearchParams({ type: 'luxury' })}
+          >
+            Luxury
+          </button>
         </div>
-        <span className='vans-clear-filters'>Clear filters</span>
+        {typeFilter && (
+          <button
+            className='van-type clear-filter'
+            onClick={() => setSearchParams({})}
+          >
+            Clear filters
+          </button>
+        )}
       </div>
+
       <div className='vans-container'>
-        {vansData.map((vans) => {
+        {filterData.map((vans) => {
           return (
             <Link to={`/vans/${vans.id}`} className='vans-link' key={vans.id}>
               <div className='vans'>
