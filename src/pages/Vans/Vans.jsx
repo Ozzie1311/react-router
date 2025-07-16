@@ -48,7 +48,15 @@ export const Vans = () => {
       <div className='vans-container'>
         {filterData.map((vans) => {
           return (
-            <Link to={`/vans/${vans.id}`} className='vans-link' key={vans.id}>
+            <Link
+              to={`${vans.id}`}
+              state={{
+                search: `?${searchParams.toString()}`,
+                type: typeFilter,
+              }}
+              className='vans-link'
+              key={vans.id}
+            >
               <div className='vans'>
                 <div className='vans-image'>
                   <img src={vans.imageUrl} alt={vans.name} />

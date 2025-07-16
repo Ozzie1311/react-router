@@ -1,0 +1,50 @@
+body {
+  overflow: hidden;
+}
+
+section.error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 128px 0;
+  align-items: center;
+  background-color: #fff7ed;
+}
+
+div.error-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+div.error-wrapper > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 32.85px;
+}
+
+div.error-wrapper > a {
+  text-decoration: none;
+}
+
+div.error-wrapper > a > button {
+  background-color: #161616;
+  color: #fff;
+  display: flex;
+  padding: 12px 26px;
+  width: 260px;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  margin-top: 32px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}

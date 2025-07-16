@@ -1,14 +1,17 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import { vansData } from '../../../vansData'
-import { FaArrowLeftLong } from 'react-icons/fa6'
 import { BackToVans } from '../../components/BackToVans'
 
 export const VansDetailed = () => {
   const params = useParams()
+  const location = useLocation()
   const findVan = vansData.find((vans) => vans.id === params.id)
+
+  const search = location.state?.search || '' // con esto verificamos que el location.state no sea un valor falsy
+  const filter = location.state?.type || '' // con esto nos estamos trayendo el valor del filtro
   return (
     <section className='vans-detail'>
-      <BackToVans />
+      <BackToVans type={filter} location={search} />
       <div className='detail-container'>
         <div className='detail-img-container'>
           <img src={findVan.imageUrl} alt={findVan.name} />

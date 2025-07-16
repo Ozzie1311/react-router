@@ -13,12 +13,13 @@ import { HostVanDetail } from './pages/Host/HostVanDetail'
 import { HostVanInfo } from './pages/Host/HostVanInfo'
 import { HostVanPricing } from './pages/Host/HostVanPricing'
 import { HostVanPhotos } from './pages/Host/HostVanPhotos'
-
+import { ErrorPage } from './pages/ErrorPage'
 export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
+          <Route path='*' element={<ErrorPage />} />
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='vans' element={<Vans />} />
