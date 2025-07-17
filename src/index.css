@@ -43,14 +43,18 @@ header .logo {
 header div {
   display: flex;
   gap: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
-header div .link {
+header div .active-link,
+header div > a {
   color: #4d4d4d;
   font-family: Inter, sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 22.92px;
+  display: flex;
 }
 
 section.home {

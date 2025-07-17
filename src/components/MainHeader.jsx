@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { LuCircleUserRound } from 'react-icons/lu'
 
 export const MainHeader = () => {
   return (
@@ -9,21 +10,27 @@ export const MainHeader = () => {
       <div>
         <NavLink
           className={({ isActive }) => (isActive ? 'active-link' : null)}
-          to='/host'
+          to='host'
         >
           Hosts
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? 'active-link' : null)}
-          to='/about'
+          to='about'
         >
           About
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? 'active-link' : null)}
-          to='/vans'
+          to='vans'
         >
           Vans
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? 'active-link' : null)}
+          to='login'
+        >
+          <LuCircleUserRound />
         </NavLink>
       </div>
     </header>
