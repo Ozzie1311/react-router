@@ -9,6 +9,9 @@ export const VansDetailed = () => {
 
   const search = location.state?.search || '' // con esto verificamos que el location.state no sea un valor falsy
   const filter = location.state?.type || '' // con esto nos estamos trayendo el valor del filtro
+
+  console.log(filter, search)
+
   return (
     <section className='vans-detail'>
       <BackToVans type={filter} location={search} />
@@ -19,6 +22,7 @@ export const VansDetailed = () => {
         <i className={`detail-${findVan.type}`}>
           {findVan.type.charAt(0).toUpperCase() + findVan.type.slice(1)}
         </i>
+
         {/* Information Container */}
         <div className='info-container'>
           <h1 className='info-container-title'>{findVan.name}</h1>

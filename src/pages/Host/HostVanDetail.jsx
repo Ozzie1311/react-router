@@ -1,5 +1,6 @@
-import { useParams, Outlet, NavLink } from 'react-router-dom'
+import { useParams, Outlet, NavLink, useLocation } from 'react-router-dom'
 import { vansData } from '../../../vansData'
+import { useGetVans } from '../../Hooks/useGetVans'
 import { BackToVans } from '../../components/BackToVans'
 
 const activeStyles = {
@@ -9,26 +10,40 @@ const activeStyles = {
 }
 
 export const HostVanDetail = () => {
-  const params = useParams()
-  const findVan = vansData.find((vans) => vans.id === params.id)
+  const { id } = useParams()
+  const location = useLocation()
+  const { data, loading, error } = useGetVans()
+
+  const search = location.state?.search || ''
+
+  if (loading) {
+    return <h1>Loading your van...</h1>
+  }
+
+  if (error) {
+    return <h1>There was an Error: {error.message}</h1>
+  }
+
+  const currentVan = data.find((van) => van.id === id)
   return (
     <>
-      <BackToVans />
+      <BackToVans location={search} />
       <section className='host-van-detail'>
         <div className='host-van-detail-container'>
           <img
-            src={findVan.imageUrl}
-            alt={findVan.name}
+            src={currentVan.imageUrl}
+            alt={currentVan.name}
             width={165}
             height={185}
           />
           <div className='detail-info-container'>
-            <i className={`i-${findVan.type}`}>
-              {findVan.type.charAt(0).toUpperCase() + findVan.type.slice(1)}
+            <i className={`i-${currentVan.type}`}>
+              {currentVan.type.charAt(0).toUpperCase() +
+                currentVan.type.slice(1)}
             </i>
-            <h2>{findVan.name}</h2>
+            <h2>{currentVan.name}</h2>
             <p>
-              <span>${findVan.price}</span>/day
+              <span>${currentVan.price}</span>/day
             </p>
           </div>
         </div>
@@ -57,7 +72,7 @@ export const HostVanDetail = () => {
         </nav>
 
         {/* Outlet */}
-        <Outlet context={{ findVan }} />
+        <Outlet context={{ currentVan }} />
       </section>
     </>
   )

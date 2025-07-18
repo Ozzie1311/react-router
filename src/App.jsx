@@ -25,8 +25,8 @@ export const App = () => {
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='vans' element={<Vans />} />
-          <Route path='login' element={<Login />} />
           <Route path='vans/:id' element={<VansDetailed />} />
+          <Route path='login' element={<Login />} />
 
           <Route element={<AuthRequired />}>
             <Route path='host' element={<HostLayout />}>

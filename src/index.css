@@ -257,6 +257,7 @@ div.vans-container div.vans {
   width: 100%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  background-color: #fff;
 }
 
 div.vans-image {
@@ -535,6 +536,7 @@ a.back-link {
   color: #201f1d;
   font-size: 15.95px;
   margin-top: 32px;
+  max-width: fit-content;
 }
 
 div.host-van-detail-container {

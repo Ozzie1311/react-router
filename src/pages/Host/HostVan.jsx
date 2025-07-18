@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
-import { vansData } from '../../../vansData'
+import { useGetVans } from '../../Hooks/useGetVans'
 
 export const HostVan = () => {
+  const { data } = useGetVans()
   return (
     <section className='hostVan'>
       <h1 className='hostVan-title'>Your listed vans</h1>
       <div className='hostVan-container'>
-        {vansData
+        {data
           .map((vans) => {
             return (
               <Link to={`/host/vans/${vans.id}`} key={vans.id}>
@@ -22,7 +23,7 @@ export const HostVan = () => {
               </Link>
             )
           })
-          .slice(3)}
+          .slice(2)}
       </div>
     </section>
   )

@@ -24,6 +24,8 @@ form > input {
   color: #161616;
   font-family: Inter, sans-serif;
   line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 form > input:focus {
@@ -32,7 +34,7 @@ form > input:focus {
 
 form > button {
   margin-top: 16px;
-  padding: 6px 0px;
+  padding: 10px 0px;
   font-family: Inter, sans-serif;
   border-radius: 6px;
   border: none;
@@ -41,6 +43,8 @@ form > button {
   line-height: 21px;
   cursor: pointer;
   margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 p.form-p {
@@ -53,4 +57,22 @@ p > a {
   font-weight: 700;
   color: #ff8c38;
   text-decoration: none;
+}
+
+.error-p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff2d2d;
+  font-family: Inter, sans-serif;
+  text-align: center;
+}
+
+.auth-message {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  padding: 12px;
+  color: #ff4b4b;
 }

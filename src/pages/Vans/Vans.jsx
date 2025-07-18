@@ -1,14 +1,16 @@
 import { vansData } from '../../../vansData'
 import { Link, useSearchParams } from 'react-router-dom'
+import { useGetVans } from '../../Hooks/useGetVans'
 
 export const Vans = () => {
   const [searchParams, setSearchParams] = useSearchParams()
+  const { data } = useGetVans()
 
   const typeFilter = searchParams.get('type')
 
   const filterData = typeFilter
-    ? vansData.filter((vans) => vans.type === typeFilter)
-    : vansData
+    ? data.filter((vans) => vans.type === typeFilter)
+    : data
 
   return (
     <section className='vans'>
