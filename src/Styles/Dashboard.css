@@ -1,0 +1,71 @@
+section.dashboard {
+  margin-top: 24px;
+  min-height: 100vh;
+}
+
+div.wrapper {
+  width: 100%;
+  display: flex;
+  border-radius: 6px;
+  padding: 24px 12px;
+}
+
+div.welcome {
+  background-color: #ffead0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: Inter, sans-serif;
+  line-height: 22px;
+  color: #161616;
+}
+
+.welcome-income {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Inter, sans-serif;
+  color: #4d4d4d;
+}
+
+.welcome-income > .welcome-span {
+  color: #161616;
+  text-decoration: underline;
+}
+
+.welcome-price {
+  font-size: 42px;
+  font-weight: bolder;
+  line-height: 38px;
+  color: #161616;
+}
+
+div.details {
+  display: flex;
+  align-items: center;
+  color: #161616;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.score {
+  background-color: #ffddb2;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-container {
+  display: flex;
+  align-self: last baseline;
+  padding: 3px;
+}

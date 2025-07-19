@@ -1,16 +1,23 @@
 import { useParams, useLocation } from 'react-router-dom'
-import { vansData } from '../../../vansData'
+import { useGetVans } from '../../Hooks/useGetVans'
 import { BackToVans } from '../../components/BackToVans'
 
 export const VansDetailed = () => {
   const params = useParams()
+  const { data, loading, error } = useGetVans()
   const location = useLocation()
-  const findVan = vansData.find((vans) => vans.id === params.id)
+  const findVan = data.find((vans) => vans.id === params.id)
 
   const search = location.state?.search || '' // con esto verificamos que el location.state no sea un valor falsy
   const filter = location.state?.type || '' // con esto nos estamos trayendo el valor del filtro
 
-  console.log(filter, search)
+  if (loading) {
+    return <h1>Loading your van...</h1>
+  }
+
+  if (error) {
+    return <p>There is an error: {error.message}</p>
+  }
 
   return (
     <section className='vans-detail'>

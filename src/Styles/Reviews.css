@@ -1,0 +1,44 @@
+section.reviews {
+  min-height: 100vh;
+  padding: 16px 0px;
+}
+
+.reviews-info {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.reviews-title {
+  line-height: 32px;
+  font-size: 32px;
+}
+
+.span-f {
+  font-size: 16px;
+  line-height: 32px;
+  color: #4d4d4d;
+  font-weight: 600;
+}
+
+.span-s {
+  text-decoration: underline;
+  color: #4d4d4d;
+}
+
+.reviews-img {
+  width: 100%;
+  height: auto;
+}
+
+.star-container {
+  margin: 16px 0px;
+}
+
+.rv1,
+.rv2,
+.line {
+  width: 100%;
+  height: auto;
+}

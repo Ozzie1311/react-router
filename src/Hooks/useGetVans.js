@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { getVans } from '../../api'
 
 export function useGetVans() {
   const [data, setData] = useState([])

@@ -1,5 +1,11 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  doc,
+  getDoc,
+} from 'firebase/firestore/lite'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBP1a0ciDlhKLtB3D-C2wLHmgNrqmb7YEc',
@@ -29,6 +35,25 @@ export async function getVans() {
   }))
 
   return vans
+}
+
+export const getVan = async (id) => {
+  const docRef = doc(database, 'vans', id)
+  const vanSnapshot = await getDoc(docRef)
+
+  if (!vanSnapshot) {
+    throw new Response('Not found', {
+      status: 404,
+      statusText: 'Van not found',
+    })
+  }
+
+  const vanData = {
+    ...vanSnapshot.data(),
+    id: vanSnapshot.id,
+  }
+
+  return vanData
 }
 // export async function getVans(id) {
 //   const url = id ? `/api/vans/${id}` : '/api/vans'
